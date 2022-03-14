@@ -8,11 +8,11 @@ import ethLogo from './assets/ethlogo.png';
 import { networks } from './utils/networks';
 
 // Constants
-const TWITTER_HANDLE = '_buildspace';
+const TWITTER_HANDLE = '0xkmg';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 // Add the domain you will be minting
-const tld = '.shanda';
-const CONTRACT_ADDRESS = '0xeA10beD0B18A0470D00D9da24386018c337EC954';
+const tld = '.day';
+const CONTRACT_ADDRESS = '0x6CA0230A7e02cd4ab68E8d98f8e87126a88a4E95';
 
 const App = () => {
 	const [network, setNetwork] = useState('');
@@ -233,7 +233,7 @@ const updateDomain = async () => {
 	// Render methods
 	const renderNotConnectedContainer = () => (
 		<div className="connect-wallet-container">
-			<img src="https://media.giphy.com/media/3ohhwytHcusSCXXOUg/giphy.gif" alt="Ninja donut gif" />
+			<img src="https://media1.giphy.com/media/p0L1rezLH2Tja/giphy.gif?cid=ecf05e47qi46lapj7xmscaue0smqr3tpfxbnsvopg33a5b6j&rid=giphy.gif&ct=g" alt="IT CROWD gif" />
       {/* Call the connectWallet function we just wrote when the button is clicked */}
 			<button onClick={connectWallet} className="cta-button connect-wallet-button">
 				Connect Wallet
@@ -268,7 +268,7 @@ const updateDomain = async () => {
 				<input
 					type="text"
 					value={record}
-					placeholder='whats ur ninja power?'
+					placeholder='How was your day?'
 					onChange={e => setRecord(e.target.value)}
 				/>
 					{/* If the editing variable is true, return the "Set record" and "Cancel" button */}
@@ -338,8 +338,8 @@ const editRecord = (name) => {
 			<div className="header-container">
 	<header>
 		<div className="left">
-			<p className="title">🎧 Shanda Name Service</p>
-			<p className="subtitle">Your immortal API on the blockchain!</p>
+			<p className="title">☀️Day Name Service</p>
+			<p className="subtitle">Mint your own day on the blockchain!</p>
 		</div>
 		{/* Display a logo and wallet connection status*/}
 		<div className="right">
@@ -360,7 +360,7 @@ const editRecord = (name) => {
 						href={TWITTER_LINK}
 						target="_blank"
 						rel="noreferrer"
-					>{`built with @${TWITTER_HANDLE}`}</a>
+					>{`built by @${TWITTER_HANDLE}`}</a>
 				</div>
 			</div>
 		</div>

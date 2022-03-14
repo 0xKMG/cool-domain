@@ -36,10 +36,7 @@ contract Domains is ERC721URIStorage {
         return allNames;
     }
 
-    constructor(string memory _tld)
-        payable
-        ERC721("Shanda Name Service", "SNS")
-    {
+    constructor(string memory _tld) payable ERC721("Day Name Service", "DNS") {
         owner = payable(msg.sender);
         tld = _tld;
         console.log("%s name service deployed", _tld);
@@ -77,7 +74,7 @@ contract Domains is ERC721URIStorage {
                     abi.encodePacked(
                         '{"name": "',
                         _name,
-                        '", "description": "A domain on the Shanda name service", "image": "data:image/svg+xml;base64,',
+                        '", "description": "A domain on the day name service", "image": "data:image/svg+xml;base64,',
                         Base64.encode(bytes(finalSvg)),
                         '","length":"',
                         strLen,
