@@ -340,12 +340,17 @@ const editRecord = (name) => {
 		<div className="left">
 			<p className="title">☀️Day Name Service</p>
 			<p className="subtitle">Mint your own day on the blockchain!</p>
+			<a className="testnet-link" href="https://faucet.polygon.technology/" target="_blank">Get test MATIC</a>
 		</div>
 		{/* Display a logo and wallet connection status*/}
 		<div className="right">
 			<img alt="Network logo" className="logo" src={ network.includes("Polygon") ? polygonLogo : ethLogo} />
 			{ currentAccount ? <p> Wallet: {currentAccount.slice(0, 6)}...{currentAccount.slice(-4)} </p> : <p> Not connected </p> }
+
 		</div>
+	
+			
+		
 	</header>
 </div>
 				
