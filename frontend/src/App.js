@@ -12,7 +12,7 @@ const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 // Add the domain you will be minting
 const tld = '.shanda';
-const CONTRACT_ADDRESS = '0x270bdD18a89b5D70f67530fDD7a85f13C3181893';
+const CONTRACT_ADDRESS = '0xeA10beD0B18A0470D00D9da24386018c337EC954';
 
 const App = () => {
 	const [network, setNetwork] = useState('');
@@ -246,7 +246,9 @@ const updateDomain = async () => {
 		if (network !== 'Polygon Mumbai Testnet') {
 			return (
 				<div className="connect-wallet-container">
-					<p>Please connect to Polygon Mumbai Testnet</p>
+					<h2>Please switch to Polygon Mumbai Testnet</h2>
+					{/* This button will call our switch network function */}
+					<button className='cta-button mint-button' onClick={switchNetwork}>Click here to switch</button>
 				</div>
 			);
 		}
